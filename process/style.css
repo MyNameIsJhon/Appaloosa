@@ -1,0 +1,57 @@
+.process-app {
+    width: 95%;
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Ajusté pour que les div soient espacées */
+}
+
+div.process-comp {
+    width: 22%;
+    position: relative;
+    margin-bottom: 20px; /* Ajout pour un espacement entre les div */
+}
+
+div.process-comp h3::after {
+    background-image: url("./blue-arrow.svg");
+    background-size: contain;
+    color: rgba(0, 0, 255, 0.191);
+    width: 30px;
+    height: 15px;
+    content: " ";
+    display: inline;
+    position: absolute;
+    bottom: 30%;
+    right: -15%;
+
+}
+
+div.process-comp h6 {
+    margin-bottom: 0;
+}
+
+div.process-comp h3 {
+    margin-top: 10px;
+}
+
+div.process-comp:nth-child(4) h3::after{
+    display:none;
+}
+
+@media only screen and (max-width: 600px) {
+    .process-app {
+        flex-direction: column; /* Changement de la direction pour empiler les div */
+        align-items: center; /* Centrage des div sur l'axe horizontal */
+    }
+
+    div.process-comp {
+        width: 100%;
+    }
+
+    div.process-comp h3::after {
+        left: 50%;
+        transform: translateX(-50%) rotate(90deg);
+        bottom: -20px; /* Ajustement pour l'espacement entre les div en mode responsive */
+    }
+}

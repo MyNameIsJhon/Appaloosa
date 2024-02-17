@@ -1,0 +1,54 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Fond de la page en gris clair */
+}
+
+.slider-container {
+    width: 90%;
+    margin: 40px auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background-color: rgb(0,19,48);
+    /* Ajout pour ajuster la hauteur automatiquement */
+    align-items: center;
+}
+
+.slider {
+    /* Modification pour un défilement vertical si nécessaire */
+    display: block; /* Changement de flex à block */
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    /* Assurer que le slide s'adapte à son contenu */
+    width: 100%; /* Pleine largeur pour chaque slide */
+    box-sizing: border-box;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    display: flex; /* Utiliser flex pour centrer le texte verticalement */
+    align-items: center; /* Centrage vertical */
+    justify-content: center; /* Centrage horizontal */
+    min-height: 200px; /* Hauteur minimum pour gérer le texte plus long */
+}
+
+button {
+    padding: 10px 20px;
+    border: 2px solid #ccc;
+    background-color: #ccc;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #bf0033;
+    border-color: #bf0033;
+}
